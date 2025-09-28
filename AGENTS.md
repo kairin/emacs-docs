@@ -8,8 +8,8 @@
 
 **Emacs Documentation** is a comprehensive documentation website for Emacs built with modern web technologies and local CI/CD workflows. It provides zero-cost GitHub Pages deployment with performance optimization and accessibility features for the Emacs community.
 
-**Repository**: https://github.com/kairin/emacs-docs
-**Live Site**: https://kairin.github.io/emacs-docs/
+**Repository**: https://github.com/kairin/get-emacs
+**Live Site**: https://kairin.github.io/get-emacs/
 **Integration**: Ready for [agents.md](https://agents.md/) workflow
 
 ## ⚡ NON-NEGOTIABLE REQUIREMENTS
