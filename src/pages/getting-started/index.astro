@@ -1,0 +1,91 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Getting Started - Emacs Documentation" description="Learn how to install Emacs, understand the basics, and get up and running quickly.">
+	<main class="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+		<div class="container mx-auto px-4 py-16">
+			<div class="max-w-4xl mx-auto">
+				<div class="mb-8">
+					<a href="/emacs-docs/" class="text-sm text-muted-foreground hover:text-foreground transition-colors">
+						← Back to Home
+					</a>
+				</div>
+				
+				<h1 class="text-4xl md:text-5xl font-bold mb-6">Getting Started with Emacs</h1>
+				<p class="text-xl text-muted-foreground mb-12 max-w-3xl">
+					Welcome to Emacs! This guide will help you install Emacs, understand the basics, and get up and running quickly.
+				</p>
+
+				<div class="grid gap-8">
+					<section class="bg-card border rounded-lg p-6">
+						<h2 class="text-2xl font-semibold mb-4">📦 Installation</h2>
+						<div class="space-y-4">
+							<div>
+								<h3 class="text-lg font-medium mb-2">macOS</h3>
+								<pre class="bg-muted p-3 rounded text-sm overflow-x-auto"><code>brew install emacs</code></pre>
+							</div>
+							<div>
+								<h3 class="text-lg font-medium mb-2">Ubuntu/Debian</h3>
+								<pre class="bg-muted p-3 rounded text-sm overflow-x-auto"><code>sudo apt install emacs</code></pre>
+							</div>
+							<div>
+								<h3 class="text-lg font-medium mb-2">Windows</h3>
+								<p class="text-muted-foreground">Download from <a href="https://www.gnu.org/software/emacs/download.html" class="text-primary hover:underline" target="_blank">gnu.org/software/emacs</a></p>
+							</div>
+						</div>
+					</section>
+
+					<section class="bg-card border rounded-lg p-6">
+						<h2 class="text-2xl font-semibold mb-4">🎯 First Steps</h2>
+						<div class="space-y-4">
+							<div>
+								<h3 class="text-lg font-medium mb-2">Starting Emacs</h3>
+								<p class="text-muted-foreground mb-2">Launch Emacs from your terminal or applications menu:</p>
+								<pre class="bg-muted p-3 rounded text-sm overflow-x-auto"><code>emacs</code></pre>
+							</div>
+							<div>
+								<h3 class="text-lg font-medium mb-2">Essential Key Bindings</h3>
+								<div class="grid md:grid-cols-2 gap-4">
+									<div class="bg-muted/50 p-3 rounded">
+										<code class="text-sm"><strong>C-x C-f</strong> - Open file</code>
+									</div>
+									<div class="bg-muted/50 p-3 rounded">
+										<code class="text-sm"><strong>C-x C-s</strong> - Save file</code>
+									</div>
+									<div class="bg-muted/50 p-3 rounded">
+										<code class="text-sm"><strong>C-x C-c</strong> - Exit Emacs</code>
+									</div>
+									<div class="bg-muted/50 p-3 rounded">
+										<code class="text-sm"><strong>C-g</strong> - Cancel command</code>
+									</div>
+								</div>
+								<p class="text-sm text-muted-foreground mt-2">Note: C- means hold Ctrl key</p>
+							</div>
+						</div>
+					</section>
+
+					<section class="bg-card border rounded-lg p-6">
+						<h2 class="text-2xl font-semibold mb-4">🛠️ Next Steps</h2>
+						<div class="grid md:grid-cols-2 gap-6">
+							<div class="space-y-3">
+								<h3 class="text-lg font-medium">Configuration</h3>
+								<p class="text-muted-foreground text-sm">Learn how to customize Emacs to fit your workflow.</p>
+								<a href="/emacs-docs/configuration" class="inline-flex items-center text-primary hover:underline text-sm">
+									Configure Emacs →
+								</a>
+							</div>
+							<div class="space-y-3">
+								<h3 class="text-lg font-medium">Advanced Topics</h3>
+								<p class="text-muted-foreground text-sm">Deep dive into Elisp and advanced features.</p>
+								<a href="/emacs-docs/advanced" class="inline-flex items-center text-primary hover:underline text-sm">
+									Advanced Topics →
+								</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
