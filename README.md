@@ -1,8 +1,8 @@
-# Astro Local Runner
+# Emacs Documentation
 
-> 🚀 **Modern website template with comprehensive local CI/CD workflows and zero-cost GitHub Pages deployment**
+> 📚 **Comprehensive Emacs documentation website with modern local CI/CD workflows and zero-cost GitHub Pages deployment**
 
-A complete development infrastructure for building, testing, and deploying Astro websites without relying on expensive cloud services. Features local-first CI/CD, automated GitHub Pages deployment, and performance optimization.
+A complete documentation infrastructure for Emacs, featuring local-first CI/CD, automated GitHub Pages deployment, and performance optimization. Built with Astro for fast, accessible documentation delivery.
 
 [![Astro](https://img.shields.io/badge/Astro-5.14.1-FF5D01?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)

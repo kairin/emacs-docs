@@ -1,7 +1,7 @@
 {
-  "name": "astro-local-runner",
+  "name": "emacs-docs",
   "version": "0.1.0",
-  "description": "Astro website with comprehensive local CI/CD workflows and zero-cost GitHub Pages deployment",
+  "description": "Emacs Documentation Website with comprehensive local CI/CD workflows and zero-cost GitHub Pages deployment",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -19,9 +19,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kairin/astro-local-runner.git"
+    "url": "https://github.com/kairin/emacs-docs.git"
   },
   "keywords": [
+    "emacs",
+    "documentation",
     "astro",
     "website",
     "local-ci-cd",
