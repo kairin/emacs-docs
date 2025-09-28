@@ -1,20 +1,22 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import react from '@astrojs/react';
 
-// Astro Local Runner - Optimized Configuration
+// Emacs Documentation - Optimized Configuration with React and shadcn/ui support
 // Zero-cost GitHub Pages deployment with local CI/CD workflows
 export default defineConfig({
   // GitHub Pages deployment configuration for Emacs Documentation
   site: 'https://kairin.github.io',
   base: '/emacs-docs',
 
-  // Integrations for modern web development
+  // Integrations for modern web development with React and shadcn/ui
   integrations: [
     tailwind({
-      // Enable base styles for better defaults
-      applyBaseStyles: true,
+      // Disable base styles to let shadcn/ui handle them
+      applyBaseStyles: false,
     }),
+    react(), // For interactive components and shadcn/ui
   ],
 
   // Note: TypeScript strict mode is configured via tsconfig.json
