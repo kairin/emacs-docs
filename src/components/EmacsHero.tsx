@@ -14,10 +14,10 @@ export function EmacsHero() {
         </p>
         <div className="flex gap-4 justify-center flex-wrap">
           <Button size="lg" asChild>
-            <a href="/emacs-docs/getting-started">Get Started</a>
+            <a href="/get-emacs/getting-started">Get Started</a>
           </Button>
           <Button variant="outline" size="lg" asChild>
-            <a href="/emacs-docs/docs">Browse Docs</a>
+            <a href="/get-emacs/docs">Browse Docs</a>
           </Button>
         </div>
       </div>
@@ -35,7 +35,7 @@ export function EmacsHero() {
               Learn how to install Emacs, understand the basics, and get up and running quickly.
             </p>
             <Button variant="ghost" size="sm" asChild>
-              <a href="/emacs-docs/getting-started">Learn More →</a>
+              <a href="/get-emacs/getting-started">Learn More →</a>
             </Button>
           </CardContent>
         </Card>
@@ -52,7 +52,7 @@ export function EmacsHero() {
               Explore configuration options, packages, and how to make Emacs your own.
             </p>
             <Button variant="ghost" size="sm" asChild>
-              <a href="/emacs-docs/configuration">Learn More →</a>
+              <a href="/get-emacs/configuration">Learn More →</a>
             </Button>
           </CardContent>
         </Card>
@@ -69,7 +69,7 @@ export function EmacsHero() {
               Master advanced Emacs features, write Elisp, and extend functionality.
             </p>
             <Button variant="ghost" size="sm" asChild>
-              <a href="/emacs-docs/advanced">Learn More →</a>
+              <a href="/get-emacs/advanced">Learn More →</a>
             </Button>
           </CardContent>
         </Card>

@@ -8,7 +8,7 @@ import react from '@astrojs/react';
 export default defineConfig({
   // GitHub Pages deployment configuration for Emacs Documentation
   site: 'https://kairin.github.io',
-  base: '/emacs-docs',
+  base: '/get-emacs',
 
   // Integrations for modern web development with React and shadcn/ui
   integrations: [
