@@ -8,7 +8,7 @@ const { title, description = "Comprehensive Emacs Documentation with modern web 
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
@@ -30,7 +30,7 @@ const { title, description = "Comprehensive Emacs Documentation with modern web 
 		
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="dark:bg-background dark:text-foreground">
 		<slot />
 	</body>
 </html>
