@@ -5,9 +5,9 @@ import tailwind from '@astrojs/tailwind';
 // Astro Local Runner - Optimized Configuration
 // Zero-cost GitHub Pages deployment with local CI/CD workflows
 export default defineConfig({
-  // GitHub Pages deployment configuration
+  // GitHub Pages deployment configuration for Emacs Documentation
   site: 'https://kairin.github.io',
-  base: '/astro-local-runner',
+  base: '/emacs-docs',
 
   // Integrations for modern web development
   integrations: [

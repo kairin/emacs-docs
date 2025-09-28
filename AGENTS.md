@@ -1,4 +1,4 @@
-# Astro Local Runner - AI Agent Instructions
+# Emacs Documentation - AI Agent Instructions
 
 > 🤖 **CRITICAL**: This file (AGENTS.md) is the PRIMARY instruction document for ALL AI assistants (Claude, Gemini, ChatGPT, etc.) working on this repository. ALL requirements in this file are NON-NEGOTIABLE and MUST be followed at ALL times.
 
@@ -6,10 +6,10 @@
 
 ## 🎯 Project Overview
 
-**Astro Local Runner** is a modern website template with comprehensive local CI/CD workflows and zero-cost GitHub Pages deployment. It provides a complete development infrastructure for building, testing, and deploying Astro websites without relying on expensive cloud services.
+**Emacs Documentation** is a comprehensive documentation website for Emacs built with modern web technologies and local CI/CD workflows. It provides zero-cost GitHub Pages deployment with performance optimization and accessibility features for the Emacs community.
 
-**Repository**: https://github.com/YOUR_USERNAME/astro-local-runner
-**Live Site**: https://YOUR_USERNAME.github.io/astro-local-runner/
+**Repository**: https://github.com/kairin/emacs-docs
+**Live Site**: https://kairin.github.io/emacs-docs/
 **Integration**: Ready for [agents.md](https://agents.md/) workflow
 
 ## ⚡ NON-NEGOTIABLE REQUIREMENTS
@@ -50,7 +50,7 @@ Examples:
 
 #### GitHub Safety Strategy (MANDATORY)
 ```bash
-# MANDATORY: Every commit must use this workflow
+# MANDATORY: Every commit must use this workflow with proper attribution
 DATETIME=$(date +"%Y%m%d-%H%M%S")
 BRANCH_NAME="${DATETIME}-feat-description"
 git checkout -b "$BRANCH_NAME"
@@ -61,8 +61,8 @@ make ci  # CRITICAL: Always run local CI first
 git add .
 git commit -m "Descriptive commit message
 
-🤖 Generated with [Claude Code](https://claude.ai/code)
-Co-Authored-By: Claude <noreply@anthropic.com>"
+🤖 Generated with [AI Assistant Name] (Claude Code/GitHub Copilot CLI/Gemini CLI)
+Co-Authored-By: [Assistant] <noreply@[platform].com>"
 git push -u origin "$BRANCH_NAME"
 git checkout main
 git merge "$BRANCH_NAME" --no-ff
