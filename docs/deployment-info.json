@@ -1,0 +1,6 @@
+{
+  "buildTime": "2025-09-28T21:45:19.542Z",
+  "astroVersion": "5.x",
+  "deploymentTarget": "GitHub Pages",
+  "cicdType": "Local Runners"
+}
