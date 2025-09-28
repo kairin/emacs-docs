@@ -1,16 +1,53 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import { EmacsHero } from '../components/EmacsHero.tsx';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Emacs Documentation - Modern Guide & Reference" description="Comprehensive Emacs documentation with modern web technologies, local CI/CD workflows, and zero-cost GitHub Pages deployment.">
+	<main class="min-h-screen bg-gradient-to-b from-background to-secondary/20">
+		<EmacsHero client:load />
+		
+		<section class="container mx-auto px-4 py-16">
+			<div class="text-center mb-12">
+				<h2 class="text-3xl font-bold mb-4">Built with Modern Technologies</h2>
+				<p class="text-muted-foreground max-w-2xl mx-auto">
+					This documentation site is built with Astro, React, Tailwind CSS, and shadcn/ui, 
+					featuring comprehensive local CI/CD workflows and zero-cost GitHub Pages deployment.
+				</p>
+			</div>
+			
+			<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+				<div class="p-6 rounded-lg bg-card border">
+					<h3 class="font-semibold mb-2">⚡ Astro</h3>
+					<p class="text-sm text-muted-foreground">Modern static site generator</p>
+				</div>
+				<div class="p-6 rounded-lg bg-card border">
+					<h3 class="font-semibold mb-2">⚛️ React</h3>
+					<p class="text-sm text-muted-foreground">Interactive components</p>
+				</div>
+				<div class="p-6 rounded-lg bg-card border">
+					<h3 class="font-semibold mb-2">🎨 Tailwind CSS</h3>
+					<p class="text-sm text-muted-foreground">Utility-first styling</p>
+				</div>
+				<div class="p-6 rounded-lg bg-card border">
+					<h3 class="font-semibold mb-2">🧩 shadcn/ui</h3>
+					<p class="text-sm text-muted-foreground">Beautiful UI components</p>
+				</div>
+			</div>
+		</section>
+
+		<footer class="border-t mt-16">
+			<div class="container mx-auto px-4 py-8 text-center">
+				<p class="text-muted-foreground">
+					🤖 Built with GitHub Copilot CLI • 
+					<a href="https://github.com/kairin/emacs-docs" class="hover:text-foreground transition-colors">
+						View on GitHub
+					</a> • 
+					<a href="https://kairin.github.io/emacs-docs/" class="hover:text-foreground transition-colors">
+						Live Documentation
+					</a>
+				</p>
+			</div>
+		</footer>
+	</main>
+</Layout>
