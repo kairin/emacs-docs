@@ -2,12 +2,15 @@
 # Zero-cost local development and deployment workflows
 # Inspired by MCP Manager and MetaSpec-Kyocera best practices
 
-.PHONY: help setup build deploy status clean test dev preview local-runners
+.PHONY: help setup build deploy status clean test dev preview local-runners spec-init spec-status spec-impl spec-bench spec-help
+
+# Configuration
+SPEC_KIT = .specify/scripts/spec-kit-runner.sh
 
 # Default target
 help: ## Show this help message
-	@echo "Astro Local Runner - Local CI/CD Automation"
-	@echo "=========================================="
+	@echo "Astro Local Runner - Local CI/CD Automation + Spec-Kit"
+	@echo "====================================================="
 	@echo ""
 	@echo "🚀 Quick Start:"
 	@echo "  make setup    # Initial setup (install dependencies)"
@@ -17,6 +20,12 @@ help: ## Show this help message
 	@echo ""
 	@echo "📋 Available targets:"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
+	@echo ""
+	@echo "🔧 Spec-Kit Emacs Implementation:"
+	@echo "  make spec-init STAGE=001   # Initialize Emacs stage"
+	@echo "  make spec-status          # Check implementation status"
+	@echo "  make spec-impl STAGE=001  # Execute stage implementation"
+	@echo "  make spec-bench           # Run performance benchmarks"
 	@echo ""
 	@echo "🔧 Local Runners Available:"
 	@ls -la local-infra/runners/ 2>/dev/null | grep -E "\.(sh)$$" | wc -l | xargs -I {} echo "  {} runner scripts available"
@@ -32,6 +41,8 @@ setup: ## Initial project setup (install all dependencies)
 	npm install
 	@echo "🔧 Setting up local CI/CD infrastructure..."
 	chmod +x local-infra/runners/*.sh
+	@echo "🔧 Setting up spec-kit runner..."
+	chmod +x $(SPEC_KIT) 2>/dev/null || echo "⚠️ Spec-kit not found, skipping..."
 	@echo "📋 Verifying system requirements..."
 	@which node >/dev/null || (echo "❌ Node.js not found. Install Node.js 18+" && exit 1)
 	@which npm >/dev/null || (echo "❌ npm not found. Install Node.js 18+" && exit 1)
@@ -185,6 +196,38 @@ local-runners: ## List and verify all local CI/CD runners
 	@echo "  ./local-infra/runners/deploy.sh           - Enhanced deployment"
 	@echo "  ./local-infra/runners/gh-pages-setup.sh   - GitHub Pages configuration"
 	@echo "  ./local-infra/runners/performance-check.sh - Performance validation"
+
+# Spec-Kit Integration Commands
+spec-init: ## Initialize Emacs stage (usage: make spec-init STAGE=001)
+	@if [ -z "$(STAGE)" ]; then \
+		echo "❌ STAGE parameter required"; \
+		echo "Usage: make spec-init STAGE=001"; \
+		echo "Available stages: 001, 002, 003"; \
+		exit 1; \
+	fi
+	@echo "🚀 Initializing Spec-Kit Stage $(STAGE)..."
+	$(SPEC_KIT) init $(STAGE)
+
+spec-status: ## Show Spec-Kit implementation status and readiness
+	@echo "📊 Spec-Kit Implementation Status"
+	$(SPEC_KIT) status
+
+spec-impl: ## Execute stage implementation (usage: make spec-impl STAGE=001)
+	@if [ -z "$(STAGE)" ]; then \
+		echo "❌ STAGE parameter required"; \
+		echo "Usage: make spec-impl STAGE=001"; \
+		exit 1; \
+	fi
+	@echo "⚡ Implementing Spec-Kit Stage $(STAGE)..."
+	$(SPEC_KIT) implement $(STAGE)
+
+spec-bench: ## Run Spec-Kit performance benchmarks
+	@echo "📈 Running Spec-Kit Performance Benchmarks"
+	$(SPEC_KIT) benchmark
+
+spec-help: ## Show detailed Spec-Kit help and commands
+	@echo "📚 Spec-Kit Detailed Help"
+	$(SPEC_KIT) help
 
 # Emergency recovery
 emergency-reset: ## Emergency reset to last known good state
